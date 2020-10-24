@@ -46,7 +46,6 @@ for i in 0..<20 {
     items.append(item)
 }
 self.tagView.add(items: items)
--------
 
 ```
 ## 使用过程中的注意事项
