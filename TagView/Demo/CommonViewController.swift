@@ -38,7 +38,6 @@ class CommonViewController: BaseViewController {
         let itemHeight: CGFloat = 35
         
         var items: [GLTagItem] = []
-        
         for i in 0..<20 {
             let label = UILabel()
             label.textAlignment = .center
@@ -50,7 +49,7 @@ class CommonViewController: BaseViewController {
             let item = GLTagItem(view: label, width: itemWidth, height: itemHeight)
             items.append(item)
         }
-        
         self.tagView.add(items: items)
     }
 }
+
