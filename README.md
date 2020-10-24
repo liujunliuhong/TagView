@@ -49,6 +49,7 @@ self.tagView.add(items: items)
 
 ```
 ## 使用过程中的注意事项
+- 该框架内部做了屏幕旋转的适配，因此不比担心屏幕旋转时，内部元素的排列。
 - 该开源库适合`item`数量不是很多的情况下使用，如果数据很多，请考虑使用`UICollectionView`。当然，非要使用`GLTagView`也不是不可以，只是要考虑好内存使用的情况。
 - 该库没有做滚动兼容，如果`item`排版超出屏幕了，可以用`UIScrollView`来包裹`GLTagView`来达到滚动效果
 - 如果`item`的高和宽要根据自身内容做自适应，请把`GLTagItem`的`width`和`height`属性设置为0，然后自定义`view`，最后在自定义`view`里面重写`intrinsicContentSize`方法。

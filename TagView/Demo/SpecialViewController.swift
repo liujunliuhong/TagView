@@ -59,7 +59,11 @@ public class SpecialViewController: BaseViewController {
             } else {
                 view.backgroundColor = .gray
             }
-            view.button.setTitle("\(i)", for: .normal)
+            var string: String = "\(i)"
+            for _ in 0..<2 {
+                string += string
+            }
+            view.button.setTitle(string, for: .normal)
             let widthIndex = arc4random() % UInt32(widths.count)
             let heightIndex = arc4random() % UInt32(heights.count)
             let itemWidth = widths[Int(widthIndex)]
