@@ -1,0 +1,20 @@
+PODS:
+  - Masonry (1.1.0)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - Masonry
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 63c21f1455525d5e236537d3b088187c67592d49
+
+COCOAPODS: 1.10.0.rc.1
