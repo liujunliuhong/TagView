@@ -20,7 +20,7 @@ public class SpecialViewController: BaseViewController {
         tagView.backgroundColor = .orange
         tagView.lineSpacing = 15.0
         tagView.interitemSpacing = 30.0
-        tagView.preferdWidth = 250.0
+//        tagView.preferdWidth = 250.0
         tagView.inset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
         tagView.verticalAlignment = .top
         return tagView
@@ -45,11 +45,12 @@ public class SpecialViewController: BaseViewController {
         self.tagView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(left)
             make.top.equalTo(self.toolView.snp.bottom).offset(20)
+            make.right.equalToSuperview().offset(-left)
         }
         
         var items: [GLTagItem] = []
         
-        let widths: [CGFloat] = [25, 30, 40, 50, 60, 70]
+//        let widths: [CGFloat] = [25, 30, 40, 50, 60, 70]
         let heights: [CGFloat] = [30, 40, 50, 60]
         
         for i in 0..<10 {
@@ -64,11 +65,11 @@ public class SpecialViewController: BaseViewController {
                 string += string
             }
             view.button.setTitle(string, for: .normal)
-            let widthIndex = arc4random() % UInt32(widths.count)
+//            let widthIndex = arc4random() % UInt32(widths.count)
             let heightIndex = arc4random() % UInt32(heights.count)
-            let itemWidth = widths[Int(widthIndex)]
+//            let itemWidth = widths[Int(widthIndex)]
             let itemHeight = heights[Int(heightIndex)]
-            let item = GLTagItem(view: view, width: itemWidth, height: itemHeight)
+            let item = GLTagItem(view: view, width: .zero, height: itemHeight)
             items.append(item)
             
             view.tapClosure = {
@@ -109,11 +110,12 @@ public class SpecialViewController: BaseViewController {
         
         self.toolView.preferdClosure = { [weak self] in
             guard let self = self else { return }
-            let widths: [CGFloat] = [250.0, 300.0, 100.0, 120.0, 140.0, 160.0, 180.0, 200.0]
-            let widthIndex = arc4random() % UInt32(widths.count)
-            let width = widths[Int(widthIndex)]
-            print("\(width)")
-            self.tagView.preferdWidth = width
+            let offsets: [CGFloat] = [10, 30, 50, 70, 80, 100]
+            let index = arc4random() % UInt32(offsets.count)
+            let offset = offsets[Int(index)]
+            self.tagView.snp.updateConstraints { (make) in
+                make.right.equalToSuperview().offset(-offset)
+            }
         }
         
         self.toolView.removeClosure = { [weak self] in
@@ -161,7 +163,7 @@ fileprivate class _View: UIView {
     }
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 50, height: 20)
+        return self.button.intrinsicContentSize
     }
 }
 

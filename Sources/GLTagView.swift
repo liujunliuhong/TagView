@@ -56,8 +56,6 @@ import UIKit
     
     /// `item`集合
     private var items: [GLTagItem] = []
-    /// 是否可以布局。防止多次调用
-    private var shouldLayout: Bool = true
     
     
     @objc public override init(frame: CGRect) {
@@ -91,19 +89,21 @@ extension GLTagView {
 }
 
 extension GLTagView {
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        if !self.shouldLayout {
-            return
+    public override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        self.items.forEach { (item) in
+            item.view.layoutIfNeeded()
         }
-        self.reloadUI(isLayoutItem: true)
-        self.shouldLayout = false
     }
-}
-
-extension GLTagView {
+    
     public override var intrinsicContentSize: CGSize {
         return self.reloadUI(isLayoutItem: false)
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        self.reloadUI(isLayoutItem: true)
+        self.invalidateIntrinsicContentSize()
     }
 }
 
@@ -366,11 +366,17 @@ extension GLTagView {
         self.refresh()
     }
     
-    /// 刷新界面。只有特殊情况下才调用此方法。一般不需要手动调用
+    @objc public func removeAllItems() {
+        self.items.forEach { (item) in
+            item.view.removeFromSuperview()
+        }
+        self.items.removeAll()
+        self.refresh()
+    }
+    
+    /// 刷新界面
     @objc public func refresh() {
-        self.shouldLayout = true
         self.setNeedsLayout()
         self.layoutIfNeeded()
-        self.invalidateIntrinsicContentSize()
     }
 }

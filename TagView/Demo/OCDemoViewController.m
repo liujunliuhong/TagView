@@ -57,6 +57,7 @@
         _tagView.inset = UIEdgeInsetsMake(10, 10, 10, 10);
         _tagView.lineSpacing = 15.0;
         _tagView.interitemSpacing = 30.0;
+        _tagView.backgroundColor = [UIColor purpleColor];
     }
     return _tagView;
 }
