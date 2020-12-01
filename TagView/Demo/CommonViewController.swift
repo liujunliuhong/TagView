@@ -15,7 +15,6 @@ class CommonViewController: BaseViewController {
         tagView.backgroundColor = .orange
         tagView.lineSpacing = 15.0
         tagView.interitemSpacing = 30.0
-        tagView.preferdWidth = 250.0
         tagView.inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         tagView.verticalAlignment = .top
         return tagView
@@ -31,7 +30,7 @@ class CommonViewController: BaseViewController {
         self.tagView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(left)
             make.top.equalToSuperview().offset(topHeight)
-            // 没有设置宽和高，但是设置了`preferdWidth`
+            make.right.equalToSuperview().offset(-left)
         }
         
         let itemWidth: CGFloat = 80
@@ -52,4 +51,5 @@ class CommonViewController: BaseViewController {
         self.tagView.add(items: items)
     }
 }
+
 

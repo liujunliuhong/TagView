@@ -27,9 +27,15 @@ let tagView = GLTagView()
 tagView.backgroundColor = .orange
 tagView.lineSpacing = 15.0
 tagView.interitemSpacing = 30.0
-tagView.preferdWidth = 250.0
 tagView.inset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 tagView.verticalAlignment = .top
+self.view.addSubview(tagView)
+
+tagView.snp.makeConstraints { (make) in
+    make.left.equalToSuperview().offset(10)
+    make.top.equalToSuperview().offset(100)
+    make.right.equalToSuperview().offset(-10)
+}
 ```
 2、设置`items`
 ```
@@ -54,9 +60,11 @@ self.tagView.add(items: items)
 - 该库没有做滚动兼容，如果`item`排版超出屏幕了，可以用`UIScrollView`来包裹`GLTagView`来达到滚动效果
 - 如果`item`的高和宽要根据自身内容做自适应，请把`GLTagItem`的`width`和`height`属性设置为0，然后自定义`view`，最后在自定义`view`里面重写`intrinsicContentSize`方法。
 - `GLTagView`支持`AutoLayout`和`Frame`布局，也就是说你可以使用`SnapKit`或者`Masonry`。
-- 如果同时设置了`preferdWidth`和`GLTagView`的宽度，将优先使用`preferdWidth`，换句话说`preferdWidth`优先级最高。
 
 ## 更新记录(倒叙)
+### 2、1.0.1（2020.12.01）
+- 优化
+
 ### 1、1.0.0（2020.10.24）
 - 发布首个版本
 
