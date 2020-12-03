@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GLTagView'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = '轻量级标签选择控件'
   s.description      = '轻量级标签选择控件，扩展性强。采用Swift编写，兼容OC。'
   s.homepage         = 'https://github.com/liujunliuhong/TagView'

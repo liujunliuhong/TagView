@@ -148,7 +148,7 @@ extension GLTagView {
             let height: CGFloat = size.height
             //
             if preItem != nil {
-                if (X + width + rightPadding).isLess(than: containerWidth) { /* 不需要换行 */
+                if (X + width + rightPadding).isLessThanOrEqualTo(containerWidth) { /* 不需要换行 */
                     item.view.frame = CGRect(x: X, y: preItem!.view.frame.minY, width: width, height: height)
                     if maxUpLineHeight.isLess(than: preItem!.view.frame.minY + height) {
                         maxUpLineHeight = preItem!.view.frame.minY + height
