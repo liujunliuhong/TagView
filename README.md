@@ -62,6 +62,9 @@ self.tagView.add(items: items)
 - `GLTagView`支持`AutoLayout`和`Frame`布局，也就是说你可以使用`SnapKit`或者`Masonry`。
 
 ## 更新记录(倒叙)
+### 3、1.0.2（2020.12.03）
+- 修改Bug
+
 ### 2、1.0.1（2020.12.01）
 - 优化
 
