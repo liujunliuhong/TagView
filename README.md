@@ -1,5 +1,5 @@
 # TagView
-轻量级标签选择控件，采用Swift编写，兼容OC。
+轻量级标签选择控件，采用Swift编写
 
 # 为什么写这个库?
 &emsp;&emsp;标签选择功能相信大家在项目中是经常会碰到的，那么大家是怎么解决的呢？是每次都自己写一个还是去找别人写好的呢？如果自己写的话，封装性和扩展性是否很好呢？<br/>
@@ -11,19 +11,19 @@
 
 ## 安装
 #### 手动
-Clone代码，把`Sources`文件夹拖入项目就可以使用了
+推荐使用`CocoaPods`
 
 #### CocoaPods
 
 ```
-pod 'GLTagView'
+pod 'TagView'
 ```
-如果提示未找到，先执行`pod repo update`，再执行`pod install`。理论上支持`iOS 8.0`以上系统
+如果提示未找到，先执行`pod repo update`，再执行`pod install`。理论上支持`iOS 9.0`以上系统
 
 ## 使用(具体用法请查看Demo，使用方法非常简单)
-1、初始化`GLTagView`
+1、初始化`TagView`
 ```
-let tagView = GLTagView()
+let tagView = TagView()
 tagView.backgroundColor = .orange
 tagView.lineSpacing = 15.0
 tagView.interitemSpacing = 30.0
@@ -35,11 +35,12 @@ tagView.snp.makeConstraints { (make) in
     make.left.equalToSuperview().offset(10)
     make.top.equalToSuperview().offset(100)
     make.right.equalToSuperview().offset(-10)
+    // 不需要设置高度
 }
 ```
 2、设置`items`
 ```
-var items: [GLTagItem] = []
+var items: [TagItem] = []
 for i in 0..<20 {
     let label = UILabel()
     label.textAlignment = .center
@@ -48,7 +49,7 @@ for i in 0..<20 {
     label.backgroundColor = .red
     label.text = "\(i)"
     
-    let item = GLTagItem(view: label, width: itemWidth, height: itemHeight)
+    let item = TagItem(customView: label, width: .auto, height: .auto)
     items.append(item)
 }
 self.tagView.add(items: items)
@@ -56,12 +57,17 @@ self.tagView.add(items: items)
 ```
 ## 使用过程中的注意事项
 - 该框架内部做了屏幕旋转的适配，因此不比担心屏幕旋转时，内部元素的排列。
-- 该开源库适合`item`数量不是很多的情况下使用，如果数据很多，请考虑使用`UICollectionView`。当然，非要使用`GLTagView`也不是不可以，只是要考虑好内存使用的情况。
-- 该库没有做滚动兼容，如果`item`排版超出屏幕了，可以用`UIScrollView`来包裹`GLTagView`来达到滚动效果
-- 如果`item`的高和宽要根据自身内容做自适应，请把`GLTagItem`的`width`和`height`属性设置为0，然后自定义`view`，最后在自定义`view`里面重写`intrinsicContentSize`方法。
-- `GLTagView`支持`AutoLayout`和`Frame`布局，也就是说你可以使用`SnapKit`或者`Masonry`。
+- 该开源库适合`item`数量不是很多的情况下使用，如果数据很多，请考虑使用`UICollectionView`。当然，非要使用`TagView`也不是不可以，只是要考虑好内存使用的情况。
+- 该库没有做滚动兼容，如果`item`排版超出屏幕了，可以用`UIScrollView`来包裹`TagView`来达到滚动效果
+- 如果`item`的高和宽要根据自身内容做自适应，请把`TagItem`的`width`和`height`属性设置为`auto`，然后自定义`view`，最后在自定义`view`里面重写`intrinsicContentSize`方法。
+- `TagView`支持`AutoLayout`和`Frame`布局。
 
 ## 更新记录(倒叙)
+### 4、2.0.0（2021.05.29）
+- 移除`OC`支持，之后只支持`Swift`
+- 模块重新命名
+- 代码优化
+
 ### 3、1.0.2（2020.12.03）
 - 修改Bug
 

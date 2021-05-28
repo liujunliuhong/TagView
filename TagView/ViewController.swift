@@ -47,8 +47,7 @@ class ViewController: UIViewController {
         let model1 = Model(title: "等宽等高")
         let model2 = Model(title: "等高不等宽")
         let model3 = Model(title: "不等宽不等高")
-        let model4 = Model(title: "OC Demo")
-        self.dataSource = [model1, model2, model3, model4]
+        self.dataSource = [model1, model2, model3]
         self.tableView.reloadData()
     }
 }
@@ -80,9 +79,6 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 2 {
             let vc = SpecialViewController(title: model.title)
-            self.navigationController?.pushViewController(vc, animated: true)
-        } else if indexPath.row == 3 {
-            let vc = OCDemoViewController()
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

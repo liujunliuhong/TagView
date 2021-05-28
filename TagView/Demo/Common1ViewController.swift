@@ -10,8 +10,8 @@ import SnapKit
 
 class Common1ViewController: BaseViewController {
 
-    private lazy var tagView: GLTagView = {
-        let tagView = GLTagView()
+    private lazy var tagView: TagView = {
+        let tagView = TagView()
         tagView.backgroundColor = .orange
         tagView.lineSpacing = 15.0
         tagView.interitemSpacing = 30.0
@@ -30,13 +30,13 @@ class Common1ViewController: BaseViewController {
         self.tagView.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(left)
             make.top.equalToSuperview().offset(topHeight)
-            make.right.equalToSuperview().offset(-20) // 设置了宽，没有设置`preferdWidth`
+            make.right.equalToSuperview().offset(-20)
         }
         
         let widths: [CGFloat] = [30, 50, 60, 70, 80]
         let itemHeight: CGFloat = 35
         
-        var items: [GLTagItem] = []
+        var items: [TagItem] = []
         
         for i in 0..<20 {
             let label = UILabel()
@@ -49,7 +49,7 @@ class Common1ViewController: BaseViewController {
             let widthIndex = arc4random() % UInt32(widths.count)
             let itemWidth = widths[Int(widthIndex)]
             
-            let item = GLTagItem(view: label, width: itemWidth, height: itemHeight)
+            let item = TagItem(customView: label, width: itemWidth, height: itemHeight)
             items.append(item)
         }
         

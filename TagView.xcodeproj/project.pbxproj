@@ -7,24 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85E6404D26613DB70045ED87 /* TagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6404C26613DB70045ED87 /* TagItem.swift */; };
+		85E6404F26613E200045ED87 /* TagSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6404E26613E200045ED87 /* TagSize.swift */; };
+		85E6405126613EA30045ED87 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6405026613EA30045ED87 /* TagView.swift */; };
 		85FDA48C2543E97D0035307A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FDA48B2543E97D0035307A /* AppDelegate.swift */; };
 		85FDA4902543E97D0035307A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FDA48F2543E97D0035307A /* ViewController.swift */; };
 		85FDA4932543E97D0035307A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FDA4912543E97D0035307A /* Main.storyboard */; };
 		85FDA4952543E97E0035307A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FDA4942543E97E0035307A /* Assets.xcassets */; };
 		85FDA4982543E97E0035307A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FDA4962543E97E0035307A /* LaunchScreen.storyboard */; };
-		85FDA4AD2543EA880035307A /* GLTagItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FDA4AB2543EA880035307A /* GLTagItem.swift */; };
-		85FDA4AE2543EA880035307A /* GLTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FDA4AC2543EA880035307A /* GLTagView.swift */; };
 		85FDA4B22543EB820035307A /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FDA4B12543EB820035307A /* CommonViewController.swift */; };
 		85FDA4B62543EB8E0035307A /* SpecialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FDA4B52543EB8E0035307A /* SpecialViewController.swift */; };
 		85FDA4B92543F3690035307A /* Common1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FDA4B82543F3690035307A /* Common1ViewController.swift */; };
 		85FDA4BC2543F5E20035307A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FDA4BB2543F5E20035307A /* BaseViewController.swift */; };
-		85FDA4C62543FBBE0035307A /* OCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85FDA4C52543FBBE0035307A /* OCDemoViewController.m */; };
 		A106386C838BFFD409E29A4A /* Pods_TagView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A1FFC849DA616C18C63041 /* Pods_TagView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12A1FFC849DA616C18C63041 /* Pods_TagView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TagView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		221773270A963F1FEE8734CC /* Pods-TagView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TagView.release.xcconfig"; path = "Target Support Files/Pods-TagView/Pods-TagView.release.xcconfig"; sourceTree = "<group>"; };
+		85E6404C26613DB70045ED87 /* TagItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagItem.swift; sourceTree = "<group>"; };
+		85E6404E26613E200045ED87 /* TagSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSize.swift; sourceTree = "<group>"; };
+		85E6405026613EA30045ED87 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		85FDA4882543E97D0035307A /* TagView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85FDA48B2543E97D0035307A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85FDA48F2543E97D0035307A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,15 +35,11 @@
 		85FDA4942543E97E0035307A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85FDA4972543E97E0035307A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85FDA4992543E97E0035307A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85FDA4AB2543EA880035307A /* GLTagItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTagItem.swift; sourceTree = "<group>"; };
-		85FDA4AC2543EA880035307A /* GLTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTagView.swift; sourceTree = "<group>"; };
 		85FDA4B12543EB820035307A /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		85FDA4B52543EB8E0035307A /* SpecialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewController.swift; sourceTree = "<group>"; };
 		85FDA4B82543F3690035307A /* Common1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common1ViewController.swift; sourceTree = "<group>"; };
 		85FDA4BB2543F5E20035307A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		85FDA4BE2543FBAF0035307A /* TagView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TagView-Bridging-Header.h"; sourceTree = "<group>"; };
-		85FDA4C42543FBBE0035307A /* OCDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCDemoViewController.h; sourceTree = "<group>"; };
-		85FDA4C52543FBBE0035307A /* OCDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDemoViewController.m; sourceTree = "<group>"; };
 		B62514A28DAA8D36CC450CF2 /* Pods-TagView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TagView.debug.xcconfig"; path = "Target Support Files/Pods-TagView/Pods-TagView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,8 +102,9 @@
 		85FDA4A52543EA010035307A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				85FDA4AC2543EA880035307A /* GLTagView.swift */,
-				85FDA4AB2543EA880035307A /* GLTagItem.swift */,
+				85E6404C26613DB70045ED87 /* TagItem.swift */,
+				85E6404E26613E200045ED87 /* TagSize.swift */,
+				85E6405026613EA30045ED87 /* TagView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -115,8 +115,6 @@
 				85FDA4B12543EB820035307A /* CommonViewController.swift */,
 				85FDA4B82543F3690035307A /* Common1ViewController.swift */,
 				85FDA4B52543EB8E0035307A /* SpecialViewController.swift */,
-				85FDA4C42543FBBE0035307A /* OCDemoViewController.h */,
-				85FDA4C52543FBBE0035307A /* OCDemoViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -244,15 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85FDA4AE2543EA880035307A /* GLTagView.swift in Sources */,
 				85FDA4B92543F3690035307A /* Common1ViewController.swift in Sources */,
-				85FDA4AD2543EA880035307A /* GLTagItem.swift in Sources */,
+				85E6404D26613DB70045ED87 /* TagItem.swift in Sources */,
 				85FDA4B62543EB8E0035307A /* SpecialViewController.swift in Sources */,
+				85E6404F26613E200045ED87 /* TagSize.swift in Sources */,
 				85FDA4B22543EB820035307A /* CommonViewController.swift in Sources */,
 				85FDA4BC2543F5E20035307A /* BaseViewController.swift in Sources */,
 				85FDA4902543E97D0035307A /* ViewController.swift in Sources */,
-				85FDA4C62543FBBE0035307A /* OCDemoViewController.m in Sources */,
 				85FDA48C2543E97D0035307A /* AppDelegate.swift in Sources */,
+				85E6405126613EA30045ED87 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

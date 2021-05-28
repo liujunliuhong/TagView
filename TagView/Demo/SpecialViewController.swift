@@ -15,12 +15,11 @@ public class SpecialViewController: BaseViewController {
         return toolView
     }()
     
-    private lazy var tagView: GLTagView = {
-        let tagView = GLTagView()
+    private lazy var tagView: TagView = {
+        let tagView = TagView()
         tagView.backgroundColor = .orange
         tagView.lineSpacing = 15.0
         tagView.interitemSpacing = 30.0
-//        tagView.preferdWidth = 250.0
         tagView.inset = UIEdgeInsets(top: 10, left: 10, bottom: 0, right: 10)
         tagView.verticalAlignment = .top
         return tagView
@@ -48,9 +47,8 @@ public class SpecialViewController: BaseViewController {
             make.right.equalToSuperview().offset(-left)
         }
         
-        var items: [GLTagItem] = []
+        var items: [TagItem] = []
         
-//        let widths: [CGFloat] = [25, 30, 40, 50, 60, 70]
         let heights: [CGFloat] = [30, 40, 50, 60]
         
         for i in 0..<10 {
@@ -69,13 +67,14 @@ public class SpecialViewController: BaseViewController {
             let heightIndex = arc4random() % UInt32(heights.count)
 //            let itemWidth = widths[Int(widthIndex)]
             let itemHeight = heights[Int(heightIndex)]
-            let item = GLTagItem(view: view, width: .zero, height: itemHeight)
+            
+            let item = TagItem(customView: view, width: .auto, height: itemHeight)
             items.append(item)
             
             view.tapClosure = {
-                guard let v = item.view as? _View else { return }
+                guard let v = item.customView as? _View else { return }
                 items.forEach { (item) in
-                    if let vv = item.view as? _View {
+                    if let vv = item.customView as? _View {
                         vv.backgroundColor = .gray
                     }
                 }
@@ -86,14 +85,12 @@ public class SpecialViewController: BaseViewController {
         
         
         
-        
-        
         self.toolView.insertClosure = { [weak self] in
             guard let self = self else { return }
             let view = _View()
             view.button.setTitle("Insert", for: .normal)
             view.backgroundColor = .green
-            let item = GLTagItem(view: view, width: 100, height: 100)
+            let item = TagItem(customView: view, width: 100, height: 100)
             self.tagView.insert(item: item, at: 5)
         }
         

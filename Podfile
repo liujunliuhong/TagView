@@ -7,6 +7,5 @@ target 'TagView' do
 
   # Pods for TagView
   pod 'SnapKit'
-  pod 'Masonry'
 
 end

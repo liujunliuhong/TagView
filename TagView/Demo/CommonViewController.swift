@@ -10,8 +10,8 @@ import SnapKit
 
 class CommonViewController: BaseViewController {
 
-    private lazy var tagView: GLTagView = {
-        let tagView = GLTagView()
+    private lazy var tagView: TagView = {
+        let tagView = TagView()
         tagView.backgroundColor = .orange
         tagView.lineSpacing = 15.0
         tagView.interitemSpacing = 30.0
@@ -36,7 +36,7 @@ class CommonViewController: BaseViewController {
         let itemWidth: CGFloat = 80
         let itemHeight: CGFloat = 35
         
-        var items: [GLTagItem] = []
+        var items: [TagItem] = []
         for i in 0..<20 {
             let label = UILabel()
             label.textAlignment = .center
@@ -45,7 +45,7 @@ class CommonViewController: BaseViewController {
             label.backgroundColor = .red
             label.text = "\(i)"
             
-            let item = GLTagItem(view: label, width: itemWidth, height: itemHeight)
+            let item = TagItem(customView: label, width: itemWidth, height: itemHeight)
             items.append(item)
         }
         self.tagView.add(items: items)
