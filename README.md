@@ -16,7 +16,7 @@
 #### CocoaPods
 
 ```
-pod 'TagView'
+pod 'TagView-Swift'
 ```
 如果提示未找到，先执行`pod repo update`，再执行`pod install`。理论上支持`iOS 9.0`以上系统
 
