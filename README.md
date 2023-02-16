@@ -1,7 +1,7 @@
 # TagView
 轻量级标签选择控件，采用Swift编写
 
-# 该库即将停止维护，将使用UICollectionView实现标签列表，详见[SwiftyCollectionViewFlowLayout](https://github.com/liujunliuhong/SwiftyCollectionViewFlowLayout)
+# 该库停止维护，将使用UICollectionView实现标签列表，详见[SwiftyCollectionViewFlowLayout](https://github.com/liujunliuhong/SwiftyCollectionViewFlowLayout)
 
 # 为什么写这个库?
 &emsp;&emsp;标签选择功能相信大家在项目中是经常会碰到的，那么大家是怎么解决的呢？是每次都自己写一个还是去找别人写好的呢？如果自己写的话，封装性和扩展性是否很好呢？<br/>
